@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background: rgb(49, 42, 108);
+  background: linear-gradient(
+    90deg,
+    rgba(49, 42, 108, 1) 0%,
+    rgba(133, 45, 145, 1) 100%
+  );
+  position: relative;
+}
+.head-text {
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.head-text a {
+  position: relative;
+  font-size: 50px;
+  color: #89d6eece;
+  text-decoration: none;
+  cursor: default;
+}
+.head-text a::after {
+  position: absolute;
+  content: "";
+  width: 90px;
+  height: 7px;
+  background-color: rgb(107, 255, 88);
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+}
+
+.clock {
+  position: relative;
+  height: 400px;
+  /* background-color: red; */
+  margin-bottom: 100px;
+}
+
+.wrapper {
+  /* border: 3px solid white; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 5%;
+  min-width: 500px;
+
+  overflow: hidden;
+  z-index: 10;
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200px;
+  top: 180px;
+  left: -120px;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: rgb(49, 42, 108);
+  background: linear-gradient(
+    90deg,
+    rgba(49, 42, 108, 1) 0%,
+    rgba(133, 45, 145, 1) 100%
+  );
+  z-index: -1;
+}
+.wrapper span {
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+}
+
+/* footer */
+.foo {
+  position: relative;
+  /* background-color: yellow; */
+  height: 400px;
+  bottom: 0;
+}
+.footer {
+  position: absolute;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  bottom: 0;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
